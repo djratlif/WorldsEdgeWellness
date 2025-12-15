@@ -3,9 +3,384 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Worlds Edge Wellness</title>
+    <meta name="description" content="Megan McCraw, Licensed Therapist in Hendersonville, NC. Providing compassionate mental health counseling and therapy services in a calm, supportive environment.">
+    <meta name="keywords" content="therapist, counseling, mental health, therapy, Hendersonville NC, Megan McCraw, anxiety, depression, couples therapy">
+    <meta name="author" content="Megan McCraw, LCSW">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://worldsedgewellness.com/">
+    <meta property="og:title" content="Worlds Edge Wellness - Megan McCraw, Therapist">
+    <meta property="og:description" content="Compassionate therapy services in Hendersonville, NC. Creating a safe space for healing and growth.">
+    <meta property="og:image" content="images/hero/therapy-office.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://worldsedgewellness.com/">
+    <meta property="twitter:title" content="Worlds Edge Wellness - Megan McCraw, Therapist">
+    <meta property="twitter:description" content="Compassionate therapy services in Hendersonville, NC. Creating a safe space for healing and growth.">
+    <meta property="twitter:image" content="images/hero/therapy-office.jpg">
+
+    <title>Worlds Edge Wellness - Megan McCraw, Therapist in Hendersonville, NC</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Worlds Edge Wellness",
+        "description": "Professional therapy and counseling services",
+        "provider": {
+            "@type": "Person",
+            "name": "Megan McCraw",
+            "jobTitle": "Licensed Clinical Social Worker",
+            "description": "Experienced therapist providing compassionate mental health services"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Hendersonville",
+            "containedInPlace": {
+                "@type": "State",
+                "name": "North Carolina"
+            }
+        },
+        "serviceType": "Mental Health Counseling",
+        "url": "https://worldsedgewellness.com"
+    }
+    </script>
 </head>
 <body>
-    <h1>Worlds Edge Wellness</h1>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav container" role="navigation" aria-label="Main navigation">
+            <div class="logo">
+                <a href="index.html" aria-label="Worlds Edge Wellness - Home">
+                    Worlds Edge Wellness
+                </a>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li role="none">
+                    <a href="index.html" class="nav-link" role="menuitem">Home</a>
+                </li>
+                <li role="none">
+                    <a href="about.html" class="nav-link" role="menuitem">About Me</a>
+                </li>
+                <li role="none">
+                    <a href="offerings.html" class="nav-link" role="menuitem">Offerings</a>
+                </li>
+                <li role="none">
+                    <a href="faq.html" class="nav-link" role="menuitem">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-heading">Welcome to Worlds Edge Wellness</h1>
+                    <p class="hero-subtitle">
+                        A safe, compassionate space for healing and growth in Hendersonville, North Carolina. 
+                        I'm Megan McCraw, and I'm here to support you on your journey toward mental wellness.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+                        <a href="about.html" class="btn btn-secondary">Learn More About Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="section" aria-labelledby="services-heading">
+            <div class="container">
+                <div class="content-section">
+                    <h2 id="services-heading">How I Can Help You</h2>
+                    <p class="text-center mb-5">
+                        Every person's journey is unique. I offer personalized therapy services designed to meet you where you are 
+                        and help you move toward where you want to be.
+                    </p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div class="card-icon" aria-hidden="true">🌱</div>
+                        <h3>Individual Therapy</h3>
+                        <p>
+                            One-on-one sessions focused on your personal growth, healing, and mental wellness. 
+                            We'll work together to address anxiety, depression, trauma, and life transitions in a supportive environment.
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon" aria-hidden="true">💕</div>
+                        <h3>Couples Counseling</h3>
+                        <p>
+                            Strengthen your relationship through improved communication, conflict resolution, and deeper understanding. 
+                            Whether you're facing challenges or want to enhance your connection, I'm here to help.
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon" aria-hidden="true">🏠</div>
+                        <h3>Family Therapy</h3>
+                        <p>
+                            Navigate family dynamics, improve relationships, and create healthier communication patterns. 
+                            I work with families of all configurations to build stronger, more supportive connections.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Preview -->
+        <section class="section section-alt" aria-labelledby="about-preview-heading">
+            <div class="container">
+                <div class="grid grid-2">
+                    <div class="content-section">
+                        <h2 id="about-preview-heading">Meet Megan McCraw</h2>
+                        <p>
+                            With over 8 years of experience in mental health counseling, I bring a warm, 
+                            non-judgmental approach to therapy. I believe in the power of human connection 
+                            and the strength that lies within each person.
+                        </p>
+                        <p>
+                            My therapeutic style combines evidence-based practices with genuine compassion, 
+                            creating a space where you can feel heard, understood, and empowered to make 
+                            positive changes in your life.
+                        </p>
+                        <a href="about.html" class="btn btn-primary">Read My Full Story</a>
+                    </div>
+                    
+                    <div class="about-image">
+                        <img src="images/about/MeganHeadshot.jpg"
+                             alt="Megan McCraw, Licensed Therapist and founder of Worlds Edge Wellness"
+                             style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--border-radius-lg);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specializations -->
+        <section class="section" aria-labelledby="specializations-heading">
+            <div class="container">
+                <div class="content-section">
+                    <h2 id="specializations-heading">Areas of Specialization</h2>
+                    <p class="text-center mb-5">
+                        I have specialized training and experience in helping clients navigate these common challenges:
+                    </p>
+                </div>
+                
+                <div class="grid grid-4">
+                    <div class="card">
+                        <h4>Anxiety & Stress</h4>
+                        <p>Learn coping strategies and techniques to manage anxiety, worry, and overwhelming stress in daily life.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>Depression</h4>
+                        <p>Work through feelings of sadness, hopelessness, and disconnection to rediscover joy and purpose.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>Trauma & PTSD</h4>
+                        <p>Process difficult experiences in a safe environment using trauma-informed therapeutic approaches.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>Life Transitions</h4>
+                        <p>Navigate major life changes, career shifts, relationship changes, and other significant transitions.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>Relationship Issues</h4>
+                        <p>Improve communication, resolve conflicts, and build stronger, healthier relationships.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>Self-Esteem</h4>
+                        <p>Develop a healthier relationship with yourself and build confidence and self-worth.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>Grief & Loss</h4>
+                        <p>Process loss and grief in a supportive environment, finding ways to honor and heal.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>Work-Life Balance</h4>
+                        <p>Create boundaries and find balance between professional responsibilities and personal well-being.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach -->
+        <section class="section section-alt" aria-labelledby="approach-heading">
+            <div class="container">
+                <div class="content-section">
+                    <h2 id="approach-heading">My Therapeutic Approach</h2>
+                    <p class="text-center mb-4">
+                        I believe therapy should be a collaborative process where you feel safe, supported, and empowered. 
+                        My approach is integrative, drawing from various evidence-based methods to best serve your unique needs.
+                    </p>
+                    
+                    <div class="grid grid-2 mt-4">
+                        <div>
+                            <h3>Evidence-Based Methods</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: var(--spacing-sm);">✓ Cognitive Behavioral Therapy (CBT)</li>
+                                <li style="margin-bottom: var(--spacing-sm);">✓ Dialectical Behavior Therapy (DBT)</li>
+                                <li style="margin-bottom: var(--spacing-sm);">✓ Trauma-Informed Care</li>
+                                <li style="margin-bottom: var(--spacing-sm);">✓ Mindfulness-Based Interventions</li>
+                                <li style="margin-bottom: var(--spacing-sm);">✓ Solution-Focused Therapy</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3>Core Values</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: var(--spacing-sm);">✓ Compassion & Empathy</li>
+                                <li style="margin-bottom: var(--spacing-sm);">✓ Cultural Sensitivity</li>
+                                <li style="margin-bottom: var(--spacing-sm);">✓ Non-Judgmental Support</li>
+                                <li style="margin-bottom: var(--spacing-sm);">✓ Client-Centered Care</li>
+                                <li style="margin-bottom: var(--spacing-sm);">✓ Holistic Wellness</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="content-section">
+                    <h2 id="contact-heading">Ready to Begin Your Journey?</h2>
+                    <p class="text-center mb-5">
+                        Taking the first step toward therapy can feel overwhelming, but you don't have to do it alone. 
+                        I'm here to support you every step of the way.
+                    </p>
+                </div>
+                
+                <div class="grid grid-2">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-item">
+                            <strong>Phone:</strong>
+                            <a href="tel:+1-828-555-0123">(828) 555-0123</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <a href="mailto:megan@worldsedgewellness.com">megan@worldsedgewellness.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Location:</strong>
+                            Hendersonville, North Carolina
+                        </div>
+                        <div class="contact-item">
+                            <strong>Office Hours:</strong><br>
+                            Monday - Thursday: 9:00 AM - 6:00 PM<br>
+                            Friday: 9:00 AM - 3:00 PM<br>
+                            Weekend: By appointment
+                        </div>
+                        <p style="margin-top: var(--spacing-md); font-size: 0.9rem;">
+                            <em>I offer both in-person and telehealth sessions to accommodate your preferences and needs.</em>
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form" novalidate>
+                            <div style="margin-bottom: var(--spacing-md);">
+                                <label for="name" style="display: block; margin-bottom: var(--spacing-xs); font-weight: 500;">Name *</label>
+                                <input type="text" id="name" name="name" required 
+                                       style="width: 100%; padding: var(--spacing-sm); border: 1px solid var(--border-light); border-radius: var(--border-radius-sm); font-size: var(--font-size-base);">
+                            </div>
+                            
+                            <div style="margin-bottom: var(--spacing-md);">
+                                <label for="email" style="display: block; margin-bottom: var(--spacing-xs); font-weight: 500;">Email *</label>
+                                <input type="email" id="email" name="email" required 
+                                       style="width: 100%; padding: var(--spacing-sm); border: 1px solid var(--border-light); border-radius: var(--border-radius-sm); font-size: var(--font-size-base);">
+                            </div>
+                            
+                            <div style="margin-bottom: var(--spacing-md);">
+                                <label for="phone" style="display: block; margin-bottom: var(--spacing-xs); font-weight: 500;">Phone</label>
+                                <input type="tel" id="phone" name="phone" 
+                                       style="width: 100%; padding: var(--spacing-sm); border: 1px solid var(--border-light); border-radius: var(--border-radius-sm); font-size: var(--font-size-base);">
+                            </div>
+                            
+                            <div style="margin-bottom: var(--spacing-md);">
+                                <label for="message" style="display: block; margin-bottom: var(--spacing-xs); font-weight: 500;">Message *</label>
+                                <textarea id="message" name="message" rows="5" required 
+                                          style="width: 100%; padding: var(--spacing-sm); border: 1px solid var(--border-light); border-radius: var(--border-radius-sm); font-size: var(--font-size-base); resize: vertical;"
+                                          placeholder="Tell me a bit about what brings you to therapy and how I can help..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Send Message
+                            </button>
+                            
+                            <p style="font-size: 0.85rem; color: var(--text-light); margin-top: var(--spacing-sm);">
+                                * Required fields. Your information is confidential and secure.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Worlds Edge Wellness. All rights reserved.</p>
+            <p>Megan McCraw, LCSW | Licensed in North Carolina</p>
+            <p style="font-size: 0.85rem; margin-top: var(--spacing-sm);">
+                This website provides general information about therapy services and is not intended as a substitute for professional medical advice, diagnosis, or treatment. 
+                If you are experiencing a mental health emergency, please call 911 or go to your nearest emergency room.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Google Analytics (placeholder - replace with actual tracking ID) -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+    -->
 </body>
 </html>
