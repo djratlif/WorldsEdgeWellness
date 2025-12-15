@@ -183,11 +183,15 @@ a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--secondary-cream-light) 0%, var(--secondary-cream) 100%);
+    background: linear-gradient(rgba(135, 169, 107, 0.7), rgba(135, 169, 107, 0.8)), url('../images/hero/worldsEdgeShack.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     padding: calc(var(--spacing-xxl) + 60px) 0 var(--spacing-xxl) 0;
     text-align: center;
     position: relative;
     overflow: hidden;
+    min-height: 70vh;
 }
 
 .hero::before {
@@ -197,7 +201,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23000" opacity="0.02"/><circle cx="75" cy="75" r="1" fill="%23000" opacity="0.02"/><circle cx="50" cy="10" r="1" fill="%23000" opacity="0.02"/><circle cx="10" cy="60" r="1" fill="%23000" opacity="0.02"/><circle cx="90" cy="40" r="1" fill="%23000" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    background: rgba(247, 243, 233, 0.1);
     pointer-events: none;
 }
 
@@ -207,17 +211,19 @@ a:hover {
 }
 
 .hero h1 {
-    color: var(--primary-sage);
+    color: var(--white);
     margin-bottom: var(--spacing-md);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: var(--text-medium);
+    color: var(--white);
     margin-bottom: var(--spacing-lg);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Buttons */
