@@ -3,6 +3,16 @@
 
 /* Base styles are mobile-first (320px+) */
 
+/* Mobile Hero Background Fix */
+@media screen and (max-width: 768px) {
+    .hero {
+        background-attachment: scroll !important;
+        background-size: cover !important;
+        background-position: center !important;
+        min-height: 60vh !important;
+    }
+}
+
 /* Small Mobile Devices (320px - 480px) */
 @media screen and (max-width: 480px) {
     :root {
