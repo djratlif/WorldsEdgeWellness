@@ -96,12 +96,13 @@
     
     .nav-menu {
         position: fixed;
-        top: 100%;
+        top: 0;
         left: 0;
         right: 0;
         background-color: var(--text-charcoal);
         flex-direction: column;
         padding: var(--spacing-lg);
+        padding-top: calc(var(--spacing-lg) + 60px);
         box-shadow: var(--shadow-medium);
         transform: translateY(-100%);
         opacity: 0;
