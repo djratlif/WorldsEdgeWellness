@@ -53,12 +53,15 @@ The website consists of four main pages:
 - **Touch-friendly navigation** for mobile devices
 - **Optimized images** for different screen sizes
 
-### Design Theme: Calm and Approachable
-- **Color Palette:**
-  - Primary: Sage Green (#87A96B)
-  - Secondary: Cream (#F7F3E9, #FEFCF7)
-  - Accent: Clay (#C17B5A)
-  - Text: Charcoal (#3A3A3A, #5A5A5A, #7A7A7A)
+### Design Theme: Natural Mountain Retreat
+- **Color Palette (Inspired by worldsEdgeShack.JPG):**
+  - Primary: Forest Green (#4A5D23, #6B7B3A)
+  - Secondary: Warm Cream (#F5F1E8, #FEFCF7)
+  - Accent: Rustic Brown (#8B4513, #A0522D)
+  - Text: Charcoal (#2F2F2F, #4A4A4A, #6B6B6B)
+- **Hero Background:**
+  - worldsEdgeShack.JPG - Authentic mountain cabin at sunset/sunrise
+  - Natural colors with subtle dark overlay for text readability
 - **Typography:**
   - Headings: Nunito (Google Fonts)
   - Body Text: Source Sans Pro (Google Fonts)
