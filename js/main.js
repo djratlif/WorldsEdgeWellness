@@ -13,7 +13,22 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeAccessibility();
     
     console.log('Worlds Edge Wellness website initialized');
+    
+    // Update copyright year dynamically
+    updateCopyrightYear();
 });
+
+/**
+ * Update copyright year to current year
+ */
+function updateCopyrightYear() {
+    const currentYear = new Date().getFullYear();
+    const copyrightElements = document.querySelectorAll('.copyright-year');
+    
+    copyrightElements.forEach(element => {
+        element.textContent = currentYear;
+    });
+}
 
 /**
  * Navigation Functionality
