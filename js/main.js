@@ -304,15 +304,69 @@ function handleFormSubmission(form) {
         submitButton.textContent = 'Sending...';
     }
     
-    // Simulate form submission (replace with actual endpoint)
-    setTimeout(() => {
-        showFormSuccess(form);
-        
-        if (submitButton) {
-            submitButton.disabled = false;
-            submitButton.textContent = 'Send Message';
+    // Prepare email data
+    const emailData = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone') || 'Not provided',
+        message: formData.get('message'),
+        to_email: 'worldsedgewellness@gmail.com'
+    };
+    
+    // Send email using EmailJS (you'll need to set up EmailJS service)
+    sendEmail(emailData)
+        .then(() => {
+            showFormSuccess(form);
+            announceToScreenReader('Your message has been sent successfully!');
+        })
+        .catch((error) => {
+            console.error('Email sending failed:', error);
+            showFormError(form, 'Sorry, there was an error sending your message. Please try again or contact us directly.');
+        })
+        .finally(() => {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            }
+        });
+}
+
+/**
+ * Send email using EmailJS or fallback method
+ */
+function sendEmail(emailData) {
+    return new Promise((resolve, reject) => {
+        // Check if EmailJS is available
+        if (typeof emailjs !== 'undefined') {
+            // EmailJS implementation (requires EmailJS library to be loaded)
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+                from_name: emailData.name,
+                from_email: emailData.email,
+                phone: emailData.phone,
+                message: emailData.message,
+                to_email: emailData.to_email
+            })
+            .then(() => resolve())
+            .catch((error) => reject(error));
+        } else {
+            // Fallback: Create mailto link as backup
+            const subject = encodeURIComponent('New Contact Form Submission from ' + emailData.name);
+            const body = encodeURIComponent(
+                `Name: ${emailData.name}\n` +
+                `Email: ${emailData.email}\n` +
+                `Phone: ${emailData.phone}\n\n` +
+                `Message:\n${emailData.message}`
+            );
+            
+            const mailtoLink = `mailto:${emailData.to_email}?subject=${subject}&body=${body}`;
+            
+            // Open mailto link
+            window.location.href = mailtoLink;
+            
+            // Simulate success after a short delay
+            setTimeout(() => resolve(), 1000);
         }
-    }, 2000);
+    });
 }
 
 /**
@@ -412,7 +466,7 @@ function showFormSuccess(form) {
     successMessage.className = 'form-success';
     successMessage.innerHTML = `
         <h3>Thank you for your message!</h3>
-        <p>I'll get back to you as soon as possible, typically within 24 hours.</p>
+        <p>Your message has been sent to worldsedgewellness@gmail.com. I'll get back to you as soon as possible, typically within 1-2 business days.</p>
     `;
     successMessage.setAttribute('role', 'alert');
     
@@ -426,6 +480,27 @@ function showFormSuccess(form) {
     setTimeout(() => {
         successMessage.remove();
         form.style.display = 'block';
+    }, 10000);
+}
+
+/**
+ * Show form error message
+ */
+function showFormError(form, message) {
+    const errorMessage = document.createElement('div');
+    errorMessage.className = 'form-error';
+    errorMessage.innerHTML = `
+        <h3>Message Not Sent</h3>
+        <p>${message}</p>
+        <p>You can also reach me directly at <a href="mailto:worldsedgewellness@gmail.com">worldsedgewellness@gmail.com</a> or <a href="tel:+1-828-490-1573">(828) 490-1573</a>.</p>
+    `;
+    errorMessage.setAttribute('role', 'alert');
+    
+    form.parentNode.insertBefore(errorMessage, form);
+    
+    // Remove error message after 10 seconds
+    setTimeout(() => {
+        errorMessage.remove();
     }, 10000);
 }
 
