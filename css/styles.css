@@ -521,11 +521,11 @@ textarea.error {
 .mt-4 { margin-top: var(--spacing-lg); }
 .mt-5 { margin-top: var(--spacing-xl); }
 
-/* Animations */
+/* Animations - Fixed to prevent blinking */
 @keyframes fadeInUp {
     from {
-        opacity: 0;
-        transform: translateY(30px);
+        opacity: 0.1;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -534,7 +534,13 @@ textarea.error {
 }
 
 .fade-in-up {
-    animation: fadeInUp 0.6s ease-out;
+    animation: fadeInUp 0.8s ease-out;
+    opacity: 0.1; /* Start with slight opacity to prevent flash */
+}
+
+/* Ensure elements are visible by default */
+.card, .content-section {
+    opacity: 1;
 }
 
 /* Accessibility */
