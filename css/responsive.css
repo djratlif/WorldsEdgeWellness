@@ -391,6 +391,38 @@
     .fade-in-up {
         animation: none;
     }
+    
+    /* Ensure content is visible for users who prefer reduced motion */
+    .card:not(.fade-in-up),
+    .content-section:not(.fade-in-up) {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* Fallback for when JavaScript is disabled */
+.no-js .card,
+.no-js .content-section {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+}
+
+/* Additional mobile optimizations for smooth scrolling */
+@media screen and (max-width: 768px) {
+    /* Ensure smooth scrolling performance on mobile */
+    * {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    
+    /* Disable complex animations on mobile for better performance */
+    .card,
+    .content-section {
+        will-change: auto !important;
+    }
 }
 
 /* Dark Mode Support (if user prefers) */

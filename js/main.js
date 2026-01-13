@@ -3,6 +3,10 @@
  * Interactive functionality for Megan McCraw's therapist website
  */
 
+// Remove no-js class and add js class for progressive enhancement
+document.documentElement.classList.remove('no-js');
+document.documentElement.classList.add('js');
+
 // DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functionality
@@ -254,19 +258,31 @@ function initializeScrollEffects() {
  * Scroll-triggered animations
  */
 function initializeScrollAnimations() {
+    // Skip animations on mobile to prevent blinking
+    if (window.innerWidth <= 768) {
+        const animatedElements = document.querySelectorAll('.card, .content-section');
+        animatedElements.forEach(element => {
+            element.classList.add('fade-in-up');
+        });
+        return;
+    }
+    
     const animatedElements = document.querySelectorAll('.card, .content-section');
     
-    // Create intersection observer
+    // Create intersection observer with more mobile-friendly settings
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-up');
+                // Add a small delay to prevent rapid flickering
+                setTimeout(() => {
+                    entry.target.classList.add('fade-in-up');
+                }, 50);
                 observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.05, // Lower threshold for earlier triggering
+        rootMargin: '0px 0px -20px 0px' // Smaller margin for earlier triggering
     });
     
     // Observe elements
