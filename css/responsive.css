@@ -163,6 +163,20 @@
         padding: 0 var(--spacing-sm);
     }
     
+    /* Hero buttons spacing on mobile */
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+    
+    .hero-actions .spwidget-button-wrapper,
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    
     /* Contact info stacking */
     .contact-info {
         padding: var(--spacing-lg);
