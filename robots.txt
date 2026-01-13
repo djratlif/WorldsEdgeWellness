@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://worldsedgewellness.com/sitemap.xml
+
+# Disallow crawling of any admin or private directories (if they exist in the future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+
+# Allow crawling of CSS and JS files for better page rendering in search results
+Allow: /css/
+Allow: /js/
+Allow: /images/

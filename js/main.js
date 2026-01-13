@@ -313,10 +313,12 @@ function handleFormSubmission(form) {
         return;
     }
     
-    // Show loading state
+    // Show loading state with spinner
     if (submitButton) {
         submitButton.disabled = true;
-        submitButton.textContent = 'Sending...';
+        const originalText = submitButton.textContent;
+        submitButton.innerHTML = '<span class="loading-spinner"></span> Sending...';
+        submitButton.setAttribute('data-original-text', originalText);
     }
     
     // Prepare email data
@@ -341,7 +343,9 @@ function handleFormSubmission(form) {
         .finally(() => {
             if (submitButton) {
                 submitButton.disabled = false;
-                submitButton.textContent = 'Send Message';
+                const originalText = submitButton.getAttribute('data-original-text') || 'Send Message';
+                submitButton.textContent = originalText;
+                submitButton.removeAttribute('data-original-text');
             }
         });
 }
@@ -424,12 +428,34 @@ function validateField(field) {
         }
     }
     
-    // Phone validation
+    // Phone validation (improved)
     else if (fieldType === 'tel' && value) {
-        const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-        if (!phoneRegex.test(value.replace(/[\s\-\(\)]/g, ''))) {
+        const cleanPhone = value.replace(/[\s\-\(\)\+\.]/g, '');
+        if (cleanPhone.length < 10 || cleanPhone.length > 15 || !/^\d+$/.test(cleanPhone)) {
             isValid = false;
-            errorMessage = 'Please enter a valid phone number.';
+            errorMessage = 'Please enter a valid phone number (10-15 digits).';
+        }
+    }
+    
+    // Message length validation
+    else if (field.tagName.toLowerCase() === 'textarea' && value) {
+        if (value.length < 10) {
+            isValid = false;
+            errorMessage = 'Please provide a more detailed message (at least 10 characters).';
+        } else if (value.length > 2000) {
+            isValid = false;
+            errorMessage = 'Message is too long (maximum 2000 characters).';
+        }
+    }
+    
+    // Name validation
+    else if (field.name === 'name' && value) {
+        if (value.length < 2) {
+            isValid = false;
+            errorMessage = 'Please enter your full name (at least 2 characters).';
+        } else if (!/^[a-zA-Z\s\-\'\.]+$/.test(value)) {
+            isValid = false;
+            errorMessage = 'Name can only contain letters, spaces, hyphens, and apostrophes.';
         }
     }
     
