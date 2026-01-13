@@ -1,4 +1,4 @@
-# Worlds Edge Wellness - Therapist Website - By: Drew Ratliff
+# Worlds Edge Wellness - Therapist Website
 
 A professional, responsive website for Megan McCraw, a therapist serving Hendersonville, North Carolina. This website features a calm and approachable design optimized for both web and mobile devices.
 
