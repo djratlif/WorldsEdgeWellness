@@ -185,6 +185,28 @@
     .faq-item.active .faq-answer {
         padding: var(--spacing-md);
     }
+    
+    /* Hero Actions - Button Layout for Mobile */
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-lg);
+    }
+    
+    .hero-actions .spwidget-button-wrapper,
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .hero-actions .spwidget-button {
+        width: 100% !important;
+        margin-right: 0 !important;
+        text-align: center;
+        display: block;
+    }
 }
 
 /* Tablet Devices (768px - 1024px) */
@@ -223,6 +245,24 @@
         grid-template-columns: 1fr 1fr;
         gap: var(--spacing-xl);
         align-items: start;
+    }
+    
+    /* Hero Actions - Tablet Layout */
+    .hero-actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .hero-actions .spwidget-button-wrapper,
+    .hero-actions .btn {
+        width: auto;
+        max-width: none;
+    }
+    
+    .hero-actions .spwidget-button {
+        width: auto !important;
+        margin-right: var(--spacing-sm) !important;
     }
 }
 
