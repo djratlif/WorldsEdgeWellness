@@ -231,16 +231,16 @@ a:hover {
 
 /* Hero Actions - Default Desktop Layout */
 .hero-actions {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-lg);
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: var(--spacing-md) !important;
+    margin-top: var(--spacing-lg) !important;
 }
 
 .hero-actions .spwidget-button-wrapper {
-    display: inline-block;
+    display: inline-block !important;
 }
 
 /* Buttons */
