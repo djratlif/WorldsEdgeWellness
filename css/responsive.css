@@ -8,8 +8,9 @@
     .hero {
         background-attachment: scroll !important;
         background-size: cover !important;
+        background-repeat: no-repeat !important;
         background-position-x: center !important;
-        background-position-y: -100px !important;
+        background-position-y: -20px !important;
         min-height: 60vh !important;
     }
 }
