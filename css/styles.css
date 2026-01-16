@@ -185,7 +185,8 @@ a:hover {
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('../images/hero/worldsEdgeShack.JPG');
     background-size: cover;
-    background-position: center;
+    background-position-x: center;
+    background-position-y: -100px;
     background-attachment: fixed;
     padding: calc(var(--spacing-xxl) + 60px) 0 var(--spacing-xxl) 0;
     text-align: center;
