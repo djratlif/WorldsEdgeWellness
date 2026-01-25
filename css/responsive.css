@@ -30,6 +30,11 @@
         padding: 0 var(--spacing-sm);
     }
     
+    .nav {
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
+    }
+    
     h1 {
         font-size: 2rem;
     }
@@ -70,6 +75,11 @@
 @media screen and (min-width: 481px) and (max-width: 767px) {
     .container {
         padding: 0 var(--spacing-md);
+    }
+    
+    .nav {
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
     }
     
     .grid-2 {
@@ -220,6 +230,11 @@
         padding: 0 var(--spacing-lg);
     }
     
+    .nav {
+        padding-left: var(--spacing-lg);
+        padding-right: var(--spacing-lg);
+    }
+    
     .nav-menu {
         gap: var(--spacing-md);
     }
@@ -296,6 +311,11 @@
 @media screen and (min-width: 1200px) {
     .container {
         padding: 0 var(--spacing-xl);
+    }
+    
+    .nav {
+        padding-left: var(--spacing-xl);
+        padding-right: var(--spacing-xl);
     }
     
     .hero h1 {
