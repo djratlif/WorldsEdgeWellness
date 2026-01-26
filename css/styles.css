@@ -146,6 +146,10 @@ a:hover {
     color: var(--primary-forest);
 }
 
+.logo a:focus {
+    outline: none;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
